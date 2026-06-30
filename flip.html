@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Card Flip</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Playfair+Display:wght@700&display=swap');
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --bg: #0e0e12; --card-w: 160px; --card-h: 240px; --radius: 16px; --gap: 20px; }
+  body { min-height: 100vh; background: var(--bg); display: flex; flex-direction: column; align-items: center; justify-content: center; font-family: 'Noto Sans KR', sans-serif; }
+  .deck { display: flex; gap: var(--gap); perspective: 1200px; }
+  .card-wrap { width: var(--card-w); height: var(--card-h); perspective: 800px; cursor: pointer; }
+  .card-inner { width: 100%; height: 100%; position: relative; transform-style: preserve-3d; transition: transform .65s cubic-bezier(.23,1,.32,1); }
+  .card-inner.flipped { transform: rotateY(180deg); }
+  .face { position: absolute; inset: 0; border-radius: var(--radius); backface-visibility: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden; color: white; }
+  .front { background: linear-gradient(145deg, #1c1c2e 0%, #14142a 100%); border: 1px solid rgba(255,255,255,.08); }
+  .back { transform: rotateY(180deg); padding: 20px; text-align: center; }
+  
+  /* 카드별 색상 */
+  .c1 { background: linear-gradient(150deg, #3b1fa8, #6c3bff); }
+  .c2 { background: linear-gradient(150deg, #a8381f, #ff6b3b); }
+  .c3 { background: linear-gradient(150deg, #1f6e3b, #3bff9a); }
+  .c4 { background: linear-gradient(150deg, #8a1f8f, #ff3bd6); }
+  .c5 { background: linear-gradient(150deg, #1a5a8a, #3baeff); }
+</style>
+</head>
+<body>
+
+<div class="deck">
+  <div class="card-wrap" onclick="this.querySelector('.card-inner').classList.toggle('flipped')">
+    <div class="card-inner"><div class="face front">01</div><div class="face back c1">운세<br>대길</div></div>
+  </div>
+  <div class="card-wrap" onclick="this.querySelector('.card-inner').classList.toggle('flipped')">
+    <div class="card-inner"><div class="face front">02</div><div class="face back c2">열정<br>타이밍</div></div>
+  </div>
+  <div class="card-wrap" onclick="this.querySelector('.card-inner').classList.toggle('flipped')">
+    <div class="card-inner"><div class="face front">03</div><div class="face back c3">성장<br>시작</div></div>
+  </div>
+  <div class="card-wrap" onclick="this.querySelector('.card-inner').classList.toggle('flipped')">
+    <div class="card-inner"><div class="face front">04</div><div class="face back c4">직관<br>따라가기</div></div>
+  </div>
+  <div class="card-wrap" onclick="this.querySelector('.card-inner').classList.toggle('flipped')">
+    <div class="card-inner"><div class="face front">05</div><div class="face back c5">평온<br>숨고르기</div></div>
+  </div>
+</div>
+
+</body>
+</html>
