@@ -40,11 +40,7 @@
   }
   .home-btn:hover { color: #fff; }
 
-  h1 {
-    font-family: 'Playfair Display', serif;
-    color: #fff;
-    margin-bottom: 3rem;
-  }
+  h1 { font-family: 'Playfair Display', serif; color: #fff; margin-bottom: 3rem; }
 
   .deck { display: flex; gap: var(--gap); perspective: 1200px; }
 
@@ -75,10 +71,10 @@
   .front { background: linear-gradient(145deg, #1c1c2e 0%, #14142a 100%); border: 1px solid rgba(255,255,255,.08); color: #fff; font-size: 2rem; }
   .back { transform: rotateY(180deg); padding: 20px; color: #fff; text-align: center; }
 
-  /* 카드별 그라데이션 */
+  /* 카드 4개 색상 */
   .c1 { background: linear-gradient(150deg, #3b1fa8, #6c3bff); }
   .c2 { background: linear-gradient(150deg, #a8381f, #ff6b3b); }
-  .c3 { background: linear-gradient(150deg, #1f6e3b, #3bff9a); }
+  .c3 { background: linear-gradient(150deg, #1f6e3b, #3bff9a); color: #0a2a18; }
   .c4 { background: linear-gradient(150deg, #8a1f8f, #ff3bd6); }
 
   @media (max-width: 600px) {
@@ -94,16 +90,16 @@
 
 <div class="deck">
   <div class="card-wrap" onclick="this.querySelector('.card-inner').classList.toggle('flipped')">
-    <div class="card-inner"><div class="face front">01</div><div class="face back c1">대길<br>뜻밖의 행운</div></div>
+    <div class="card-inner"><div class="face front">01</div><div class="face back c1">대길<br>행운의 시작</div></div>
   </div>
   <div class="card-wrap" onclick="this.querySelector('.card-inner').classList.toggle('flipped')">
     <div class="card-inner"><div class="face front">02</div><div class="face back c2">열정<br>최고의 타이밍</div></div>
   </div>
   <div class="card-wrap" onclick="this.querySelector('.card-inner').classList.toggle('flipped')">
-    <div class="card-inner"><div class="face front">03</div><div class="face back c3">성장<br>새로운 시작</div></div>
+    <div class="card-inner"><div class="face front">03</div><div class="face back c3">성장<br>새로운 도전</div></div>
   </div>
   <div class="card-wrap" onclick="this.querySelector('.card-inner').classList.toggle('flipped')">
-    <div class="card-inner"><div class="face front">04</div><div class="face back c4">직관<br>마음을 따라가기</div></div>
+    <div class="card-inner"><div class="face front">04</div><div class="face back c4">직관<br>마음의 소리</div></div>
   </div>
 </div>
 
