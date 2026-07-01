@@ -2,33 +2,54 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>작품 소개 | YUYEON ONLY</title>
     <style>
         body { background: #0e0e12; color: #fff; font-family: 'Noto Sans KR', sans-serif; padding: 40px; }
         .home-btn { color: rgba(255,255,255,0.4); text-decoration: none; margin-bottom: 20px; display: block; }
-        .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; margin-top: 30px; }
-        .work-item { border: 1px solid #333; border-radius: 12px; overflow: hidden; cursor: pointer; transition: 0.3s; text-decoration: none; color: white; }
+        
+        .gallery { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+            gap: 25px; 
+            margin-top: 30px; 
+            max-width: 1000px; 
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .work-item { 
+            border: 1px solid #333; 
+            border-radius: 12px; 
+            overflow: hidden; 
+            cursor: pointer; 
+            transition: 0.3s; 
+            text-decoration: none; 
+            color: white; 
+            background: #1c1c2e;
+        }
+        
         .work-item:hover { transform: translateY(-10px); border-color: #6c3bff; }
-        /* 샘플 이미지 영역 */
-        .work-item img { width: 100%; height: 200px; object-fit: cover; background: #1c1c2e; }
+        
+        /* PNG 이미지를 위한 설정 */
+        .work-item img { width: 100%; height: 200px; object-fit: cover; }
         .work-item h3 { padding: 15px; margin: 0; font-size: 1rem; text-align: center; }
+
+        /* 모바일 최적화 */
+        @media (max-width: 600px) {
+            body { padding: 20px; }
+            .gallery { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
     <a href="index.html" class="home-btn">← HOME</a>
     <h1>WORKS</h1>
+    
     <div class="gallery">
         <a href="#" class="work-item">
-            <img src="https://placehold.co/400x300/3b1fa8/white?text=Work+01" alt="작품1">
-            <h3>프로젝트 제목 1</h3>
-        </a>
-        <a href="#" class="work-item">
-            <img src="https://placehold.co/400x300/a8381f/white?text=Work+02" alt="작품2">
-            <h3>프로젝트 제목 2</h3>
-        </a>
-        <a href="#" class="work-item">
-            <img src="https://placehold.co/400x300/1f6e3b/white?text=Work+03" alt="작품3">
-            <h3>프로젝트 제목 3</h3>
+            <img src="workimage/work1.png" alt="작품1">
+            <h3>뮤지컬 사의찬미 "사내"</h3>
         </a>
     </div>
 </body>
