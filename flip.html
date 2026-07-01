@@ -54,7 +54,7 @@
   .face { position: absolute; inset: 0; border-radius: var(--radius); backface-visibility: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; }
   
   .front { 
-    background-image: url('back1.png');
+    background-image: url('back1.png'); 
     background-size: cover; 
     background-position: center; 
     border: 1px solid rgba(255,255,255,.08); 
@@ -64,12 +64,16 @@
   .back-vertical { background-size: cover; background-repeat: no-repeat; background-position: center; }
   .back-horizontal { background-size: contain; background-repeat: no-repeat; background-position: center; background-color: #0e0e12; }
 
+  /* 모바일 최적화 반응형 코드 */
   @media (max-width: 600px) {
-    .deck { flex-wrap: wrap; justify-content: center; max-width: 320px; }
+    .deck { flex-wrap: wrap; justify-content: center; max-width: 340px; gap: 15px; }
+    .card-wrap { width: 140px; height: 210px; }
+    h1 { font-size: 1.8rem; margin-bottom: 2rem; }
   }
 </style>
 </head>
 <body>
+
 <a href="index.html" class="home-btn">← HOME</a>
 
 <h1>카드를 눌러보세요</h1>
@@ -81,7 +85,6 @@
       <div class="face back back-vertical" style="background-image: url('front1.png');"></div>
     </div>
   </div>
-
   <div class="card-wrap" onclick="this.querySelector('.card-inner').classList.toggle('flipped')">
     <div class="card-inner">
       <div class="face front"></div>
@@ -95,7 +98,6 @@
       <div class="face back back-horizontal" style="background-image: url('front3.png');"></div>
     </div>
   </div>
-
   <div class="card-wrap" onclick="this.querySelector('.card-inner').classList.toggle('flipped')">
     <div class="card-inner">
       <div class="face front"></div>
