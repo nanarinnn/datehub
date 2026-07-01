@@ -16,10 +16,13 @@
         .title-img { width: 300px; margin-bottom: 30px; } /* 제목 크기 조정 */
         
         .menu { display: flex; gap: 20px; }
-        
-        .menu a img { 
-            width: 150px; /* 버튼 이미지 크기 조정 */
-            transition: transform 0.3s; 
+
+         .menu a img { 
+    height: 60px;       /* 원하는 높이값으로 통일하세요 */
+    width: auto;        /* 가로는 높이에 맞춰 비율이 자동 조정됨 */
+    object-fit: contain; /* 이미지가 찌그러지지 않게 함 */
+    transition: transform 0.3s; 
+}
         }
         
         .menu a:hover img { 
