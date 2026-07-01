@@ -15,24 +15,24 @@
         
         .title-img { width: 300px; margin-bottom: 30px; } 
         
-        .menu { display: flex; gap: 20px; }
+        .menu { display: flex; gap: 20px; align-items: center; }
+
+        .menu a { display: flex; align-items: center; justify-content: center; }
 
         .menu a img { 
             height: 60px;
             width: auto;
             object-fit: contain;
+            display: block;
             transition: transform 0.3s; 
         }
         
-        .menu a:hover img { 
-            transform: scale(1.1); 
-        }
+        .menu a:hover img { transform: scale(1.1); }
         
+        /* 모바일용 설정 */
         @media (max-width: 600px) {
             .title-img { width: 80%; }
-            .menu a img { 
-                height: 50px;
-            }
+            .menu a img { height: 50px; }
         }
     </style>
 </head>
